@@ -92,7 +92,8 @@ then
 else
 	cd ${INSTALL_PATH}
 	apt install -y libnl-3-dev libnl-genl-3-dev
-	wget https://github.com/sensepost/hostapd-mana/archive/master.zip -O hostapd-mana.zip
+	#wget https://github.com/sensepost/hostapd-mana/archive/master.zip -O hostapd-mana.zip
+	wget https://github.com/sensepost/hostapd-mana/archive/2.6.5.zip -O hostapd-mana.zip
 	unzip hostapd-mana.zip
 	mv -v hostapd-mana-master hostapd-mana
 	cd hostapd-mana/hostapd

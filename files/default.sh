@@ -93,10 +93,10 @@ tmux send-keys "radiusd -fl ${logdir}/radius-debug.log -d ${MY_PATH}/radiuscfg/$
 tmux select-pane -t 2
 tmux resize-pane -U 10
 touch ${logdir}/wpe.log
-tmux send-keys "tail -f -n 0 ${logdir}/wpe.log" C-m
+tmux send-keys "clear;tail -f -n 0 ${logdir}/wpe.log" C-m
 tmux split-window -h
 touch ${logdir}/auth-detail
-tmux send-keys "tail -f -n 0 ${logdir}/auth-detail | grep \" 2017\|Packet-Type\|User-Name\|Called\|Calling\|Sending\"" C-m
+tmux send-keys "clear;tail -f -n 0 ${logdir}/auth-detail | grep \"Packet-Type\|User-Name\|Called\|Calling\|Sending\"" C-m
 
-echo "Finished"
+echo "Finished! Use 'tmux attach' "
 exit 0
