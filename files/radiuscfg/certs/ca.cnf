@@ -17,9 +17,11 @@ cert_opt		= ca_default
 default_days		= 2920
 default_crl_days	= 30
 default_md		= sha1
-default_stardate	= 20160101000000Z
+default_stardate	= 20240101000000Z
 preserve		= no
 policy			= policy_match
+email_in_dn		= no
+rand_serial		= no
 
 [ policy_match ]
 countryName		= match
