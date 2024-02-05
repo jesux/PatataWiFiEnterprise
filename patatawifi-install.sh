@@ -103,13 +103,13 @@ then
 else
 	cd ${INSTALL_PATH}
 	apt install -y libnl-3-dev libnl-genl-3-dev
-	wget https://github.com/sensepost/hostapd-mana/archive/2.6.5.zip -O hostapd-mana-2.6.5.zip
-	unzip hostapd-mana-2.6.5.zip
-	mv -v ${INSTALL_PATH}/hostapd-mana-2.6.5 ${INSTALL_PATH}/hostapd-mana
-	cd ${INSTALL_PATH}/hostapd-mana/hostapd
-	make -j4
+	wget https://github.com/sensepost/hostapd-mana/archive/refs/heads/master.zip -O hostapd-mana.zip
+	unzip hostapd-mana.zip
+	mv -v ${INSTALL_PATH}/hostapd-mana-master ${INSTALL_PATH}/hostapd-mana
+	cd ${INSTALL_PATH}/hostapd-mana
+	make -j4 -C hostapd
 	cd ${INSTALL_PATH}
-	rm -v ${INSTALL_PATH}/hostapd-mana-2.6.5.zip
+	rm -v ${INSTALL_PATH}/hostapd-mana.zip
 fi
 cp -rv ${MY_PATH}/files/hostapd-mana/* ${INSTALL_PATH}/hostapd-mana/
 
