@@ -17,7 +17,7 @@ INSTALL_PATH="/root/patatawifi"
 mkdir -v "${INSTALL_PATH}"
 
 apt update
-apt -y install tmux macchanger libnl-3-dev libnl-genl-3-dev pkg-config
+apt -y install tmux iptables macchanger libnl-3-dev libnl-genl-3-dev pkg-config
 apt -y install wireless-tools iw ethtool rfkill autoconf automake libtool shtool
 
 # LIBSSL-DEV 1.0
